@@ -7,6 +7,8 @@ def application(environ, start_response):
     b = c.get('b', [''])[0]
     sum = 0
     mul = 0
+    if '' in [a, b]:
+       sum, mul = 0, 0
     if '' not in [a, b]:
        a, b = int(a), int(b)
        sum = a + b
