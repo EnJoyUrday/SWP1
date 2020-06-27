@@ -9,10 +9,14 @@ def application(environ, start_response):
     mul = 0
     if '' in [a, b]:
        sum, mul = 0, 0
-    if '' not in [a, b]:
-       a, b = int(a), int(b)
-       sum = a + b
-       mul = a * b
+    else:
+       try:
+          a, b = int(a), int(b)
+          sum = a + b
+          mul = a * b
+       except ValueError:
+          sum = "error"
+          mul = "error"
     response_body = html % {
               'sum' : sum,
               'mul' : mul
