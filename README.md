@@ -1,1 +1,2 @@
-20182212        kimeunju
+20182212 kimeunju
+Kookmin Univ. SW & Math
